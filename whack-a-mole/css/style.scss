@@ -21,7 +21,7 @@ h1 {
   margin-bottom: 0;
 }
 
-.score {
+.score-total {
   background: rgba(255, 255, 255, 0.2);
   padding: 0 3rem;
   line-height: 1;
@@ -43,7 +43,7 @@ h1 {
   flex: 1 0 33.33%;
   overflow: hidden;
   position: relative;
-  background: url("../assets/svg/target.svg") center center no-repeat rgba(0, 0, 0, 0.3);
+  background: url("../assets/svg/target.svg") center center no-repeat rgba(0, 0, 0, 0.2);
   background-size: contain;
 
   background-blend-mode: multiply;
@@ -88,7 +88,8 @@ h1 {
 }
 
 .start-button,
-.reset-button {
+.reset-button,
+.reset-top-button {
   display: flex;
   margin: auto;
 }

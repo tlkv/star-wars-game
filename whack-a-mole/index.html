@@ -10,12 +10,15 @@
 
 <body>
 
-    <h1>Catch me if you can! <span class="score">0</span>level <span class="game-level">1</span>/5 Targets Average Time <span class="game-targets">1500</span> ms</h1>
-    <h2></h2>
-    <button class ="start-button" onClick="startGame()">Start!</button>
-    <button class ="reset-button" onClick="resetGame()">Reset!</button>
+    <h1>ThisRound= <span class="current-round-score">0</span> This Game Score= <span class="score-total">0</span>level <span class="game-level">1</span>/<span class="max-level"></span> Targets Average Speed <span class="game-targets">1500</span> Sec</h1>
+    <h1>round time left= <span class="time-left"></span> Sec</h1>
+    <h1>top1=<span class="top1 top">0</span> top2=<span class="top2 top">0</span> top3=<span class="top3 top">0</span></h1>
+    <h1>ammo <span class="ammo-left">-</span></h1>
+    <h2></h2><!-- remove h1 doubles -->
+    <button class ="start-button">Start Round</button>
+    <button class ="reset-button">Reset Game</button>
     
-
+    <button class ="reset-top-button">Reset Top</button>
     <div class="game">
         <div class="hole hole1">
             <div class="mole"></div>
