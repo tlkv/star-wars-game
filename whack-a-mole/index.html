@@ -3,50 +3,84 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>whack-a-mole</title>
+    <title>Star Wars Shooting Range</title>
     <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="clouds"></div>
+    <div class="main-wrapper">
 
-    <h1>ThisRound= <span class="current-round-score">0</span> This Game Score= <span class="score-total">0</span>level <span class="game-level">1</span>/<span class="max-level"></span> Targets Average Speed <span class="game-targets">1500</span> Sec</h1>
-    <h1>round time left= <span class="time-left"></span> Sec</h1>
-    <h1>top1=<span class="top1 top">0</span> top2=<span class="top2 top">0</span> top3=<span class="top3 top">0</span></h1>
-    <h1>ammo <span class="ammo-left">-</span></h1>
-    <h2></h2><!-- remove h1 doubles -->
-    <button class ="start-button">Start Round</button>
-    <button class ="reset-button">Reset Game</button>
-    
-    <button class ="reset-top-button">Reset Top</button>
-    <div class="game">
-        <div class="hole hole1">
-            <div class="mole"></div>
-        </div>
-        <div class="hole hole2">
-            <div class="mole"></div>
-        </div>
-        <div class="hole hole3">
-            <div class="mole"></div>
-        </div>
-        <div class="hole hole4">
-            <div class="mole"></div>
-        </div>
-        <div class="hole hole5">
-            <div class="mole"></div>
-        </div>
-        <div class="hole hole6">
-            <div class="mole"></div>
-        </div>
-    </div>
-    <div class="best-scores">
-        <h2>Top scores</h2>
-        
-    </div>
-    <div class="shooter">
-        <!-- <img src="./assets/img/rifle.png" alt="shooter"> -->
-    </div>
 
+        <div class="shooting-range-wrapper">
+
+            <div class="game">
+                <div class="hole hole1">
+                    <div class="trooper"></div>
+                </div>
+                <div class="hole hole2">
+                    <div class="trooper"></div>
+                </div>
+                <div class="hole hole3">
+                    <div class="trooper"></div>
+                </div>
+                <div class="hole hole4">
+                    <div class="trooper"></div>
+                </div>
+                <div class="hole hole5">
+                    <div class="trooper"></div>
+                </div>
+                <div class="hole hole6">
+                    <div class="trooper"></div>
+                </div>
+            </div>
+        </div>
+        <div class="metrics-wrapper">
+            <h1 class="app-title">Star Wars Shooting Range</h1>
+            <div class="buttons-wrapper">
+                <button class="start-button app-button">Start Round</button>
+                <button class="reset-button app-button">Reset Game</button>
+                <button class="reset-top-button app-button">Reset Top</button>
+            </div>
+            <div class="stats-wrapper">
+
+                <div class="stats-item">Current Level <span class="metrics-field"><span
+                            class="game-level">1</span>/<span class="max-level">5</span></span>
+                </div>
+                <div class="stats-item">Targets Speed <span class="game-targets metrics-field">1.6</span></div>
+                <div class="stats-item">Round Score <span class="current-round-score metrics-field">0</span></div>
+                <div class="stats-item">Game Score <span class="score-total metrics-field">0</span></div>
+                <div class="stats-item">Round Time <span class="time-left metrics-field">10</span></div>
+                <div class="stats-item">Ammo <span class="ammo-left metrics-field">30</span></div>
+                <div class="stats-item">Last Game Score <span class="last-game-score metrics-field">0</span></div>
+            </div>
+
+            <div class="top-results">
+                <h2 class="top-score-title">Top Scorers</h2>
+                <div class="top-element-wrapper">
+                    <div class="cup-wrapper">
+                        <img src="./assets/svg/top1.svg" alt="top1">
+                    </div>
+                    <div class="top1 top metrics-field">0</div>
+                </div>
+                <div class="top-element-wrapper">
+                    <div class="cup-wrapper">
+                        <img src="./assets/svg/top2.svg" alt="top2">
+                    </div>
+                    <div class="top2 top metrics-field">0</div>
+                </div>
+                <div class="top-element-wrapper">
+                    <div class="cup-wrapper">
+                        <img src="./assets/svg/top3.svg" alt="top3">
+                    </div>
+                    <div class="top3 top metrics-field">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="./js/script.js"></script>
 </body>
 
