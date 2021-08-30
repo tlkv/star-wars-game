@@ -96,7 +96,6 @@ function getLocaleStorage() {
 }
 
 function startLevel() {
-    
     roundOver = false;
     scoreTotalValue = Number(scoreTotalNode.textContent);
     gameLevelValue = Number(gameLevelNode.textContent);
@@ -156,7 +155,7 @@ function finishLevel() {
     if (gameLevelValue === MAX_LEVEL + 1) {
         addTopScore();
         resetGame();
-        gameOverSound();        
+        gameOverSound();
     }
 }
 
@@ -194,13 +193,15 @@ function resetGame() {
     gameLevelValue = 1;
     localStorage.setItem('score-total', 0);
     localStorage.setItem('game-level', 1);
-    localStorage.setItem('targets-time', TIME_TARGET_INTERVAL / 1000);    
+    localStorage.setItem('targets-time', TIME_TARGET_INTERVAL / 1000);
 }
 
 function resetTop() {
     top1.textContent = 0;
     top2.textContent = 0;
     top3.textContent = 0;
+    lastGameScore.textContent = 0;
+    localStorage.setItem('last-game-score', 0);
     localStorage.setItem('top-1', 0);
     localStorage.setItem('top-2', 0);
     localStorage.setItem('top-3', 0);
@@ -253,18 +254,4 @@ function gameOverSound() {
     gameOverSound.play();
 }
 
-//adjust Scss
-//CHeck w3 validator
-//стилизация самооценки в консоли м мой ник там
-//допилить оформление
-
-
-
-
-/* Обязательный дополнительный фукционал
-Дополните игру постепенно усложняющимися уровнями, сохранением текущего уровня и набранного количества баллов в LocalStorage и отображением его на странице игры после перезагрузки.
-Количество уровней и в чём должно заключаться усложнение игры при переходе к следующему уровню - на ваше усмотрение.
-
-Дополнительный функционал на выбор
-добавьте звуки+,
-ограничьте количество кликов в каждом раунде, добавьте анимацию и рандомное перемещение мишеней, и получите приложение, похожее на один из лучших финальных проектов набора 2020q3 Duck Hunt.*/
+console.log('Score: 30/30 ', '\n', '+10 Повторить исходный проект', '\n', '+10 Обязательный дополнительный фукционал (уровни, плавное изменение сложности (время, скорость мишеней, патроны) + сохранение промежуточных итогов в localStorage)', '\n', '+10 Доп. функционал.', '\n', 'Полная смена тематики игры', '\n', 'Статистика с топ3 результатов и последним итогом игры', '\n', 'Звуки', '\n', 'Анимация при наведении прицела и попадании в цель', '\n', 'Ограничение кликов по количеству оставшихся выстрелов');

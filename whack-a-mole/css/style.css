@@ -1,7 +1,6 @@
 html {
   box-sizing: border-box;
   font-size: 14px;
-  background: #fff;
 }
 
 body {
@@ -9,6 +8,7 @@ body {
   margin: 0;
   font-family: "Amatic SC", cursive;
   text-transform: uppercase;
+  background-color: #000;
 }
 
 .app-title {
@@ -18,43 +18,48 @@ body {
 
 .main-wrapper {
   max-width: 1280px;
-  margin: 150px auto 5px auto;
+  margin: 150px auto 0 auto;
+  padding-bottom: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  z-index: 3;
 }
 
 .stats-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .stats-item {
-  width: 45%;
-  text-align: left;
-  margin: 5px auto;
-}
-.stats-item .metrics-field {
-  text-align: center;
+  width: 43%;
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .buttons-wrapper {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
+  margin: auto;
+  margin-bottom: 10px;
 }
 
 .shooting-range-wrapper {
   width: 60%;
+  z-index: 4;
 }
 
 .metrics-wrapper {
-  width: 40%;
+  z-index: 4;
+  width: 38%;
   font-size: 30px;
   color: #fff;
   text-align: center;
+  padding: 0 1%;
 }
 
 .cup-wrapper {
@@ -77,7 +82,13 @@ h1 {
   line-height: 1;
   border-radius: 1rem;
   display: inline-block;
-  width: 60px;
+  width: 70px;
+  font-weight: bold;
+}
+
+.metrics-white {
+  color: black;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .ammo-none {
@@ -86,7 +97,7 @@ h1 {
 
 .game {
   width: 750px;
-  height: 505px;
+  height: 510px;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -98,17 +109,14 @@ h1 {
   flex: 1 0 33.33%;
   overflow: hidden;
   position: relative;
-  /* background: url("../assets/svg/star-wars-imperial-logo.svg") center center no-repeat rgba(0, 0, 0, 0.6);  
-  background-size: 90%; */
-  /* background: url("../assets/svg/target.svg") center center no-repeat rgba(0, 0, 0, 0.2);
-  background-size: cover;
-  background-blend-mode: multiply; */
+  background: url("../assets/svg/star-wars-imperial-logo.svg") center center no-repeat #fff;
+  background-size: 90%;
 }
 
 .hole1,
 .hole2,
 .hole3 {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #e9e9e9;
 }
 
 .trooper {
@@ -121,7 +129,6 @@ h1 {
   margin-left: calc(50% - 80px);
   margin-top: 40px;
   transition: top 0.5s;
-  /* transition: bottom 0.5s; */
 }
 .trooper:hover {
   cursor: url("../assets/svg/crosshairRed.svg") 16 16, auto;
@@ -133,13 +140,15 @@ h1 {
 
 .app-button {
   display: flex;
-  margin: 0 auto 10px auto;
-  width: 120px;
-  height: 32px;
+  width: 130px;
+  height: 36px;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
+  font-size: 30px;
   font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: "Amatic SC", cursive;
 }
 
 .finished {
@@ -158,7 +167,7 @@ h1 {
   font-size: 40px;
   width: 100%;
   text-align: center;
-  margin: 15px auto 10px auto;
+  margin: 10px auto;
 }
 
 .top-element-wrapper {
@@ -173,9 +182,50 @@ h1 {
   height: auto;
 }
 
+.last-game {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
 @media (max-width: 1400px) {
   .main-wrapper {
     margin-top: 20px;
+  }
+}
+@media (max-width: 1270px) {
+  .app-title {
+    margin-top: 10px;
+  }
+
+  .trooper {
+    width: 100px;
+    height: 100px;
+    margin-left: calc(50% - 50px);
+    margin-top: 10px;
+  }
+
+  .buttons-wrapper {
+    width: 50%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .app-button {
+    margin-bottom: 10px;
+    margin-right: 5px;
+  }
+
+  .metrics-wrapper {
+    width: 100%;
+  }
+
+  .shooting-range-wrapper {
+    width: 100%;
+  }
+
+  .game {
+    width: 360px;
+    height: 260px;
   }
 }
 @keyframes move-twink-back {
@@ -224,12 +274,12 @@ h1 {
 
 .stars {
   background: #000 url("../assets/img/stars.png") repeat top center;
-  z-index: -2;
+  z-index: 1;
 }
 
 .twinkling {
   background: transparent url("../assets/img/twinkling.png") repeat top center;
-  z-index: -1;
+  z-index: 2;
   -moz-animation: move-twink-back 200s linear infinite;
   -ms-animation: move-twink-back 200s linear infinite;
   -o-animation: move-twink-back 200s linear infinite;
